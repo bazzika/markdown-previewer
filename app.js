@@ -19,6 +19,6 @@ var Markdown = React.createClass ({
 });
 ReactDOM.render(
 <Markdown />,
-
+document.getElementsByClassName('container')
 
 );
