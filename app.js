@@ -21,6 +21,7 @@ var Markdown = React.createClass ({
   },
 
   render: function() {
+    const generatedHtml=marked(this.state.textCommon);
     return (
       < div className = 'row'>
           <div className = 'left col-md-6'>
@@ -28,7 +29,7 @@ var Markdown = React.createClass ({
               {textCommon}
               </textarea>
           </div>
-        < div className = 'right col-md-6' dangerouslySetInnerHTML = {{__html:marked(this.state.textCommon)}}>
+        < div className = 'right col-md-6' dangerouslySetInnerHTML = {{__html:generatedHtml}}>
 
           </div>
       </div>
